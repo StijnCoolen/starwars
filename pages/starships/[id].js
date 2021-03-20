@@ -1,3 +1,7 @@
+import Layout from "../../components/layout";
+
 export default function StarshipDetailPage() {
-    return null;
+    return (
+        <Layout></Layout>
+    )
 }

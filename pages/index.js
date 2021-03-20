@@ -1,14 +1,23 @@
 import Layout from '../components/layout'
-import Link from 'next/link'
+import styles from "../styles/Home.module.scss"
 
-import { getAllPeople, getAllPlanets, getAllStarShips } from './api/data'
+import {
+    getPopularPeople,
+    getPopularPlanets,
+    getPopularStarShips
+} from './api/data'
+import Button from "../components/button";
+import SectionHeader from "../components/section-header";
+import StarshipCard from "../components/starship-card";
+import Slider from "../components/slider";
+import PlanetCard from "../components/planet-card";
 
 export async function getStaticProps() {
   return {
     props: {
-      people: await getAllPeople(),
-      planets: await getAllPlanets(),
-      starships: await getAllStarShips()
+      people: await getPopularPeople(),
+      planets: await getPopularPlanets(),
+      starships: await getPopularStarShips()
     }
   }
 }
@@ -16,38 +25,32 @@ export async function getStaticProps() {
 export default function Home({people, planets, starships}) {
   return (
     <Layout>
-      <section>
-        <h2>Popular Starships</h2>
-        <ul>
+      <section className={"section"}>
+        <SectionHeader text="Popular Starships"/>
+        <div className={styles.gridContainer}>
           {starships.map((ship) => (
-            <li>{ship.name}</li>
+            <StarshipCard starship={ship} />
           ))}
-        </ul>
-        <Link href="/starships">
-          <a>View more</a>
-        </Link>
+        </div>
+        <Button href="/starships" text="View more"/>
       </section>
-      
-      <section>
-        <h2>Popular Planets</h2>
-        <ul>
+
+      <section className={"section"}>
+        <SectionHeader text="Popular Planets"/>
           {planets.map((planet) => (
-            <li>{planet.name}</li>
+            <PlanetCard planet={planet}/>
           ))}
-        </ul>
       </section>
-      
-      <section>
-        <h2>Popular Characters</h2>
+
+      <section className={"section"}>
+        <SectionHeader text="Popular Characters"/>
         <ul>
           {people.map((person) => (
             <li>{person.name}</li>
           ))}
         </ul>
+        <Button href="/characters" text="View more"/>
       </section>
-      <Link href="/characters">
-          <a>View more</a>
-        </Link>
     </Layout>
   )
 }
