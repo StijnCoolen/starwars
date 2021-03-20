@@ -1,0 +1,29 @@
+@import "variables";
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $aluminium;
+  border-radius: 5px;
+  padding: 0 nth($spacing, 2);
+  width: 100%;
+}
+
+.input {
+  border: none;
+  width: 100%;
+  background-color: $aluminium;
+  padding: nth($spacing, 2);
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  color: $gunpowder;
+  margin-right: nth($spacing, 2);
+}

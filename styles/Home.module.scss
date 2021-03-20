@@ -1,0 +1,12 @@
+@import "variables";
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: nth($spacing, 2);
+  padding: nth($spacing, 2);
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
