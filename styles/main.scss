@@ -8,10 +8,11 @@ body {
   padding: 0;
   margin: 0;
   font-family: Poppins, sans-serif;
+  color: $gunpowder;
 }
 
 a {
-  color: black;
+  color: $gunpowder;
   text-decoration: none;
 }
 
@@ -30,7 +31,7 @@ a {
 .container {
   max-width: 100%;
   margin: 0 auto;
-  padding: 0 nth($spacing, 4);
+  padding: 0 nth($spacing, 2);
   @media (min-width: 1200px) {
     max-width: 1200px;
   }
