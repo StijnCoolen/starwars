@@ -17,17 +17,22 @@
 }
 
 .cardContent {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
   padding: nth($spacing, 1);
   background-color: $aluminium;
   transform: translateX(nth($spacing, 1)/2);
 }
 
 .cardTitle {
-  margin-top: 0;
-  padding: 0;
+  margin-bottom: nth($spacing, 1);
 }
 
 .cardDescription {
+  line-height: 1.5;
+  font-weight: 300;
   margin-bottom: nth($spacing, 2);
 }
 
@@ -36,5 +41,5 @@
   color: $gunpowder;
   padding: nth($spacing, 1);
   display: inline-block;
-  float: right;
+  align-self: flex-end;
 }

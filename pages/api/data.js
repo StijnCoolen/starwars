@@ -66,3 +66,7 @@ export function getAllStarShips() {
 export async function getStarShipWithId(id) {
     return axios.get(baseUrl + 'starships/' + id).then(res => res.data)
 }
+
+export async function searchStarShips(query) {
+    return axios.get(baseUrl + 'starships/?search=' + query).then(res => res.data.results)
+}

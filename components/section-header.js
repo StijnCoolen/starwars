@@ -1,4 +1,4 @@
-import styles from "../styles/SectionHeader.module.scss"
+import styles from '../styles/SectionHeader.module.scss'
 
 export default function SectionHeader({text}) {
     return (

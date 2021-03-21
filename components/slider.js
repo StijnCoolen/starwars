@@ -1,9 +1,9 @@
-import { useKeenSlider } from "keen-slider/react";
-import "keen-slider/keen-slider.min.css"
+import { useKeenSlider } from 'keen-slider/react';
+import 'keen-slider/keen-slider.min.css'
 import {useState} from 'react'
 
-import PlanetCard from "./planet-card";
 import styles from '../styles/Slider.module.scss'
+import PlanetCard from './planet-card';
 
 export default function Slider({data}) {
     const [currentSlide, setCurrentSlide] = useState(0)
@@ -25,7 +25,7 @@ export default function Slider({data}) {
         <div className={styles.wrapper}>
             <div ref={sliderRef} className="keen-slider">
                 {data.map((planet) => (
-                    <div className={'keen-slider__slide'}>
+                    <div className="keen-slider__slide" key={planet.name}>
                         <PlanetCard key={planet.name} planet={planet}/>
                     </div>
                 ))}
@@ -37,7 +37,7 @@ export default function Slider({data}) {
                             <button
                                 key={id}
                                 onClick={() => slider.moveToSlideRelative(id)}
-                                className={styles.dot + (currentSlide === id ? ` ${styles.active}` : "")}
+                                className={styles.dot + (currentSlide === id ? ` ${styles.active}` : '')}
                             />
                         )
                     })}

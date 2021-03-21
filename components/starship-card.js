@@ -1,10 +1,9 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import {useState} from 'react'
 
 import styles from '../styles/StarshipCard.module.scss'
 
-export default function StarshipCard({starship, index}) {
+export default function StarshipCard({starship}) {
     const [randomNumber] = useState(Math.floor(Math.random() * 6) + 1);
 
     return (
@@ -14,7 +13,7 @@ export default function StarshipCard({starship, index}) {
             </div>
             <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{starship.name}</h3>
-                <p className={styles.cardDescription}>{starship.model}</p>
+                <p className={styles.cardDescription}>Is a {starship.model} manufactured by {starship.manufacturer}.</p>
                 <Link href={'/starships/' + starship.id }>
                     <a className={styles.cardButton}>Read More</a>
                 </Link>

@@ -1,11 +1,11 @@
-import Header from "./header";
+import Header from './header'
 
-export default function Layout({children}) {
-    return (
+export default function Layout ({ children, onSearch }) {
+  return (
         <div>
-            <Header/>
+            <Header onSearch={onSearch}/>
             <main className="container">{children}</main>
             <footer/>
         </div>
-    )
+  )
 }
