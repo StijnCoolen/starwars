@@ -11,6 +11,7 @@ import SectionHeader from "../components/section-header";
 import StarshipCard from "../components/starship-card";
 import Slider from "../components/slider";
 import PlanetCard from "../components/planet-card";
+import CharacterCard from "../components/character-card";
 
 export async function getStaticProps() {
   return {
@@ -27,7 +28,7 @@ export default function Home({people, planets, starships}) {
     <Layout>
       <section className={"section"}>
         <SectionHeader text="Popular Starships"/>
-        <div className={styles.gridContainer}>
+        <div className={styles.gridContainer3}>
           {starships.map((ship) => (
             <StarshipCard starship={ship} />
           ))}
@@ -44,11 +45,11 @@ export default function Home({people, planets, starships}) {
 
       <section className={"section"}>
         <SectionHeader text="Popular Characters"/>
-        <ul>
-          {people.map((person) => (
-            <li>{person.name}</li>
+        <div className={styles.gridContainer2}>
+          {people.map((person, index) => (
+            <CharacterCard character={person} index={index + 1}/>
           ))}
-        </ul>
+        </div>
         <Button href="/characters" text="View more"/>
       </section>
     </Layout>

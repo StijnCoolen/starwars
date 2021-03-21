@@ -1,0 +1,39 @@
+@import "variables";
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $aluminium;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+
+  @media (min-width: 1200px) {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: nth($spacing, 1);
+
+  @media (min-width: 1200px) {
+    padding: nth($spacing, 2);
+  }
+
+  span {
+    margin: nth($spacing, 1) 0;
+  }
+}
+
+.link {
+  display: block;
+  font-weight: bold;
+  text-decoration: underline solid 3px;
+}
