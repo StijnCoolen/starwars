@@ -40,6 +40,24 @@
   background-color: $steel;
   color: $gunpowder;
   padding: nth($spacing, 1);
-  display: inline-block;
+  display: flex;
+  align-items: center;
   align-self: flex-end;
+  transition: all 0.5s ease-in-out;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    margin-left: nth($spacing, 1)/2;
+    transition: transform 0.5s;
+  }
+
+  &:hover {
+    background-color: $gunpowder;
+    color: white;
+
+    svg {
+      transform: translateX(nth($spacing, 1)/2);
+    }
+  }
 }

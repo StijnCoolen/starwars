@@ -40,7 +40,7 @@
 .subtitle {
   max-width: 80vw;
   font-size: 1.2rem;
-  margin: nth($spacing, 3);
+  margin: nth($spacing, 3) 0 0;
 
   @media (min-width: 1200px) {
     max-width: 500px;

@@ -1,10 +1,10 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from 'next/image';
+import Link from 'next/link';
 
-import styles from '../styles/Header.module.scss'
-import Searchbar from './searchbar'
+import styles from '../styles/Header.module.scss';
+import Searchbar from './searchbar';
 
-export default function Header ({ onSearch }) {
+export default function Header ({ onSearch, hideSearch, searchPlaceholder }) {
   return (
         <header className={styles.header}>
             <Link href="/">
@@ -18,8 +18,10 @@ export default function Header ({ onSearch }) {
                     <h1>Directory</h1>
                 </div>
                 <p className={styles.subtitle}>Find your favorite Characters, Films, Species, Starships and Planets</p>
-                <Searchbar onSearch={onSearch}/>
+                {!hideSearch &&
+                    <Searchbar onSearch={onSearch} searchPlaceholder={searchPlaceholder}/>
+                }
             </div>
         </header>
-  )
+  );
 }

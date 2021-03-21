@@ -1,4 +1,5 @@
-import Layout from '../components/layout'
+import {Head} from 'next/document';
+import Layout from '../components/layout';
 
 import Button from '../components/button';
 import SectionHeader from '../components/section-header';
@@ -6,11 +7,12 @@ import StarshipCard from '../components/starship-card';
 import Slider from '../components/slider';
 import CharacterCard from '../components/character-card';
 import GridContainer from '../components/grid-container';
+import SEO from '../components/seo';
 import {
     getPopularPeople,
     getPopularPlanets,
     getPopularStarShips
-} from './api/data'
+} from './api/data';
 
 export async function getStaticProps() {
   return {
@@ -19,12 +21,13 @@ export async function getStaticProps() {
       planets: await getPopularPlanets(),
       starships: await getPopularStarShips()
     }
-  }
+  };
 }
 
 export default function Home({people, planets, starships}) {
   return (
-    <Layout>
+    <Layout hideSearch={true}>
+       <SEO/>
       <section className="section">
         <SectionHeader text="Popular Starships"/>
         <GridContainer columns={3}>
@@ -38,6 +41,7 @@ export default function Home({people, planets, starships}) {
       <section className="section">
         <SectionHeader text="Popular Planets"/>
         <Slider data={planets}/>
+        <Button href="/planets" text="View more"/>
       </section>
 
       <section className="section">
@@ -50,5 +54,5 @@ export default function Home({people, planets, starships}) {
         <Button href="/characters" text="View more"/>
       </section>
     </Layout>
-  )
+  );
 }

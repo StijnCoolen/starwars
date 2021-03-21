@@ -1,7 +1,7 @@
-import {useState} from 'react'
+import {useState} from 'react';
 
-import Link from 'next/link'
-import styles from '../styles/CharacterCard.module.scss'
+import Link from 'next/link';
+import styles from '../styles/CharacterCard.module.scss';
 
 export default function CharacterCard({character}) {
     const [randomNumber] = useState(Math.floor(Math.random() * 4) + 1);
@@ -17,5 +17,5 @@ export default function CharacterCard({character}) {
                 </Link>
             </div>
         </div>
-    )
+    );
 }

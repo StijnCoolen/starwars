@@ -1,4 +1,4 @@
-import styles from '../styles/DataRow.module.scss'
+import styles from '../styles/DataRow.module.scss';
 
 export default function DataRow({label, value}) {
     return (
@@ -6,5 +6,5 @@ export default function DataRow({label, value}) {
             <p className={styles.label}>{label}</p>
             <span>{value}</span>
         </div>
-    )
+    );
 }

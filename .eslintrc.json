@@ -24,7 +24,8 @@
         "react/react-in-jsx-scope": "off",
         "react/jsx-curly-brace-presence": "warn",
         "import/order": "warn",
-        "quotes": ["error", "single"]
+        "quotes": ["error", "single"],
+        "semi": ["error", "always"]
     },
     "globals": {
         "React": "writable"

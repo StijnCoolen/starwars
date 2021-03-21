@@ -2,11 +2,10 @@
 
 .image {
   width: 100%;
-  margin: nth($spacing, 2) 0;
   display: block;
+  margin-bottom: nth($spacing, 4);
 
   @media (min-width: 1200px) {
     width: 60%;
-    margin: nth($spacing, 4) auto;
   }
 }

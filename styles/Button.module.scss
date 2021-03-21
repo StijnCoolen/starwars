@@ -1,6 +1,14 @@
+@import 'variables';
+
 .button {
   padding: 1rem 10rem;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid $gunpowder;
   text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: $gunpowder;
+    color: white;
+  }
 }

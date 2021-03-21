@@ -1,16 +1,16 @@
 import { useKeenSlider } from 'keen-slider/react';
-import 'keen-slider/keen-slider.min.css'
-import {useState} from 'react'
+import 'keen-slider/keen-slider.min.css';
+import {useState} from 'react';
 
-import styles from '../styles/Slider.module.scss'
+import styles from '../styles/Slider.module.scss';
 import PlanetCard from './planet-card';
 
 export default function Slider({data}) {
-    const [currentSlide, setCurrentSlide] = useState(0)
+    const [currentSlide, setCurrentSlide] = useState(0);
     const [sliderRef, slider] = useKeenSlider({
         initial: 0,
         slideChanged(s) {
-            setCurrentSlide(s.details().relativeSlide)
+            setCurrentSlide(s.details().relativeSlide);
         },
         slidesPerView: 1,
         spacing: 15,
@@ -19,7 +19,7 @@ export default function Slider({data}) {
                 slidesPerView: 3
             }
         }
-    })
+    });
 
     return (
         <div className={styles.wrapper}>
@@ -39,10 +39,10 @@ export default function Slider({data}) {
                                 onClick={() => slider.moveToSlideRelative(id)}
                                 className={styles.dot + (currentSlide === id ? ` ${styles.active}` : '')}
                             />
-                        )
+                        );
                     })}
                 </div>
             )}
         </div>
-    )
+    );
 }

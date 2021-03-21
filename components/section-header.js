@@ -1,4 +1,4 @@
-import styles from '../styles/SectionHeader.module.scss'
+import styles from '../styles/SectionHeader.module.scss';
 
 export default function SectionHeader({text}) {
     return (
@@ -6,5 +6,5 @@ export default function SectionHeader({text}) {
             <h2 className={styles.sectionHeader}>{text}</h2>
             <hr className={styles.line}/>
         </div>
-    )
+    );
 }
