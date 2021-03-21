@@ -38,9 +38,7 @@ export default function Home({people, planets, starships}) {
 
       <section className={"section"}>
         <SectionHeader text="Popular Planets"/>
-          {planets.map((planet) => (
-            <PlanetCard planet={planet}/>
-          ))}
+        <Slider data={planets}/>
       </section>
 
       <section className={"section"}>
