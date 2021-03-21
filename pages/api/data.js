@@ -24,12 +24,11 @@ async function getAll(resourceName) {
 
 async function getPopular(resourceName, amount) {
     const items = []
-    let id = 0;
     const result = await axios.get(baseUrl + resourceName).then(res => res.data.results)
 
     result.map(item => {
-        id = id + 1;
-        item.id = id;
+        let route = item.url.split('/')
+        item.id = route[route.length - 2]
         items.push(item);
     })
 
@@ -42,6 +41,10 @@ export async function getPopularPeople() {
 
 export async function getAllPeople() {
    return await getAll('people')
+}
+
+export async function getCharacterWithId(id) {
+    return axios.get(baseUrl + 'people/' + id).then(res => res.data)
 }
 
 export async function getPopularPlanets() {
