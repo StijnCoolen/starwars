@@ -17,7 +17,7 @@ export default function StarshipsPage({starships}) {
         <Layout>
             <section className={"section"}>
                 <SectionHeader text="Popular Starships"/>
-                <div className={styles.gridContainer}>
+                <div className={styles.gridContainer3}>
                     {starships.map((starship) => (
                         <StarshipCard starship={starship} />
                     ))}

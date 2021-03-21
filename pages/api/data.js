@@ -5,15 +5,14 @@ const baseUrl = 'https://swapi.dev/api/'
 async function getAll(resourceName) {
     const items = [];
     let currentPage = 1;
-    let id = 0;
     let page = undefined;
 
     do {
         page = await axios.get(baseUrl + resourceName + '/?page=' + currentPage)
 
         page.data.results.map(item => {
-            id = id + 1;
-            item.id = id;
+            let route = item.url.split('/')
+            item.id = route[route.length - 2]
             items.push(item)
         })
 
@@ -59,4 +58,8 @@ export async function getPopularStarShips() {
 
 export function getAllStarShips() {
    return getAll('starships')
+}
+
+export async function getStarShipWithId(id) {
+    return axios.get(baseUrl + 'starships/' + id).then(res => res.data)
 }

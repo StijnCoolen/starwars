@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   background: $steel;
+  padding-bottom: nth($spacing, 1)/2;
 }
 
 .cardImage {
@@ -18,7 +19,7 @@
 .cardContent {
   padding: nth($spacing, 1);
   background-color: $aluminium;
-  transform: translateX(10px);
+  transform: translateX(nth($spacing, 1)/2);
 }
 
 .cardTitle {
