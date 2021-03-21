@@ -1,5 +1,4 @@
 import Layout from '../components/layout'
-import styles from "../styles/Home.module.scss"
 
 import {
     getPopularPeople,
@@ -10,8 +9,8 @@ import Button from "../components/button";
 import SectionHeader from "../components/section-header";
 import StarshipCard from "../components/starship-card";
 import Slider from "../components/slider";
-import PlanetCard from "../components/planet-card";
 import CharacterCard from "../components/character-card";
+import GridContainer from "../components/grid-container";
 
 export async function getStaticProps() {
   return {
@@ -28,11 +27,11 @@ export default function Home({people, planets, starships}) {
     <Layout>
       <section className={"section"}>
         <SectionHeader text="Popular Starships"/>
-        <div className={styles.gridContainer3}>
+        <GridContainer columns={3}>
           {starships.map((ship) => (
             <StarshipCard starship={ship} />
           ))}
-        </div>
+        </GridContainer>
         <Button href="/starships" text="View more"/>
       </section>
 
@@ -43,11 +42,11 @@ export default function Home({people, planets, starships}) {
 
       <section className={"section"}>
         <SectionHeader text="Popular Characters"/>
-        <div className={styles.gridContainer2}>
+        <GridContainer columns={2}>
           {people.map((person, index) => (
             <CharacterCard character={person} index={index + 1}/>
           ))}
-        </div>
+        </GridContainer>
         <Button href="/characters" text="View more"/>
       </section>
     </Layout>

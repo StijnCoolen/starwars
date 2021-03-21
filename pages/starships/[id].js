@@ -19,7 +19,6 @@ export async function getStaticPaths() {
     const starships = await getAllStarShips()
 
     const paths = starships.map(starship => {
-        console.log(starship.id)
         return {
             params: {
                 id: starship.id

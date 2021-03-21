@@ -1,0 +1,27 @@
+@import 'variables';
+
+.gridContainer3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: nth($spacing, 2);
+  padding: nth($spacing, 2) 0;
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    padding: nth($spacing, 2);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gridContainer2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: nth($spacing, 2);
+  padding: nth($spacing, 2) 0;
+  width: 100%;
+
+  @media (min-width: 1200px) {
+    padding: nth($spacing, 2);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
