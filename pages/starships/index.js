@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Layout from '../../components/layout';
 import SectionHeader from '../../components/section-header';
 import StarshipCard from '../../components/starship-card';
-import {getAllStarShips, searchResource} from '../api/data';
+import {getAllStarShips, searchResource} from '../../lib/swapi';
 import GridContainer from '../../components/grid-container';
 import NotFound from '../../components/not-found';
 import BackButton from '../../components/back-button';

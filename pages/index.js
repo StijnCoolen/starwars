@@ -1,4 +1,3 @@
-import {Head} from 'next/document';
 import Layout from '../components/layout';
 
 import Button from '../components/button';
@@ -12,7 +11,7 @@ import {
     getPopularPeople,
     getPopularPlanets,
     getPopularStarShips
-} from './api/data';
+} from '../lib/swapi';
 
 export async function getStaticProps() {
   return {

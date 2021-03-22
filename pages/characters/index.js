@@ -2,7 +2,7 @@ import {useState} from 'react';
 import Select from 'react-select';
 import Layout from '../../components/layout';
 import SectionHeader from '../../components/section-header';
-import {getAllPeople, searchResource} from '../api/data';
+import {getAllPeople, searchResource} from '../../lib/swapi';
 import CharacterCard from '../../components/character-card';
 import GridContainer from '../../components/grid-container';
 import BackButton from '../../components/back-button';

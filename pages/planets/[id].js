@@ -3,7 +3,7 @@ import Layout from '../../components/layout';
 import styles from '../../styles/StarshipDetailPage.module.scss';
 import SectionHeader from '../../components/section-header';
 import DataRow from '../../components/data-row';
-import {getAllPlanets, getPlanetWithId} from '../api/data';
+import {getAllPlanets, getPlanetWithId} from '../../lib/swapi';
 import BackButton from '../../components/back-button';
 import SEO from '../../components/seo';
 

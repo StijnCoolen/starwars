@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import Layout from '../../components/layout';
-import {getAllStarShips, getStarShipWithId} from '../api/data';
+import {getAllStarShips, getStarShipWithId} from '../../lib/swapi';
 import DataRow from '../../components/data-row';
 import SectionHeader from '../../components/section-header';
 

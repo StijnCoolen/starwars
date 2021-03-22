@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Layout from '../../components/layout';
-import {getAllPlanets, searchResource} from '../api/data';
+import {getAllPlanets, searchResource} from '../../lib/swapi';
 import SectionHeader from '../../components/section-header';
 import GridContainer from '../../components/grid-container';
 import PlanetCard from '../../components/planet-card';

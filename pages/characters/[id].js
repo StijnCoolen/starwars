@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import Layout from '../../components/layout';
-import {getAllPeople, getCharacterWithId} from '../api/data';
+import {getAllPeople, getCharacterWithId} from '../../lib/swapi';
 import styles from '../../styles/StarshipDetailPage.module.scss';
 import SectionHeader from '../../components/section-header';
 import DataRow from '../../components/data-row';
