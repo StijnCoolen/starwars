@@ -13,7 +13,7 @@ export default function StarshipCard({starship}) {
             </div>
             <div className={styles.cardContent}>
                 <h3 className={styles.cardTitle}>{starship.name}</h3>
-                <p className={styles.cardDescription}>Is a {starship.model} manufactured by {starship.manufacturer}.</p>
+                <p className={styles.cardDescription}>Is a {starship.model} manufactured by {starship.manufacturer}, it can carry {starship.cargo_capacity} kgs.</p>
                 <Link href={'/starships/' + starship.id }>
                     <a className={styles.cardButton}>
                         Read More

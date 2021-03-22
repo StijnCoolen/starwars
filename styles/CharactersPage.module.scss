@@ -1,0 +1,23 @@
+@import "variables";
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: nth($spacing, 2) 0;
+
+  span {
+    text-transform: uppercase;
+    margin-right: nth($spacing, 2);
+  }
+}
+
+.select {
+  width: 60%;
+
+  @media (min-width: 1200px) {
+    width: 30%;
+  }
+}
