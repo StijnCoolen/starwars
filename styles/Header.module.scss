@@ -24,6 +24,24 @@
   position: absolute;
   top: 2rem;
   left: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  &:after {
+    content: '';
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    background-color: white;
+    transform-origin: bottom right;
+    transition: transform .5s ease-out;
+    margin-top: nth($spacing, 1)/2;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
 }
 
 .title {
