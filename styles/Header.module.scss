@@ -1,66 +1,67 @@
 @import 'variables';
+@import 'mixins';
 
 .header {
-  background-color: black;
-  background-image: url("/assets/hero-banner.jpg");
-  background-position: center;
-  background-size: cover;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 6rem 0;
-  position: relative;
+	align-items: center;
+	background-color: black;
+	background-image: url('/assets/hero-banner.jpg');
+	background-position: center;
+	background-size: cover;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	padding: 6rem 0;
+	position: relative;
+	text-align: center;
 }
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
 }
 
 .logo {
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	left: 2rem;
+	position: absolute;
+	top: 2rem;
 
-  &:after {
-    content: '';
-    width: 100%;
-    transform: scaleX(0);
-    height: 3px;
-    background-color: white;
-    transform-origin: bottom right;
-    transition: transform .5s ease-out;
-    margin-top: nth($spacing, 1)/2;
-  }
+	&::after {
+		background-color: white;
+		content: '';
+		height: 3px;
+		margin-top: spacing(2);
+		transform: scaleX(0);
+		transform-origin: bottom right;
+		transition: transform 0.5s ease-out;
+		width: 100%;
+	}
 
-  &:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-  }
+	&:hover::after {
+		transform: scaleX(1);
+		transform-origin: bottom left;
+	}
 }
 
 .title {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 
-  h1 {
-    margin-left: 1rem;
-  }
+	h1 {
+		margin-left: 1rem;
+	}
 }
 
 .subtitle {
-  max-width: 80vw;
-  font-size: 1.2rem;
-  margin: nth($spacing, 3) 0 0;
+	font-size: 1.2rem;
+	margin: spacing(5) 0 0;
+	max-width: 80vw;
 
-  @media (min-width: 1200px) {
-    max-width: 500px;
-  }
+	@include desktop() {
+		max-width: 500px;
+	}
 }

@@ -1,63 +1,65 @@
-@import "variables";
+@import 'variables';
+@import 'mixins';
 
 .wrapper {
-  display: flex;
-  flex-direction: column;
-  background: $steel;
-  padding-bottom: nth($spacing, 1)/2;
+	background: $steel;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: spacing(2);
 }
 
 .cardImage {
-  display: flex;
-  img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
+	display: flex;
+
+	img {
+		height: 200px;
+		object-fit: cover;
+		width: 100%;
+	}
 }
 
 .cardContent {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  align-items: flex-start;
-  padding: nth($spacing, 1);
-  background-color: $aluminium;
-  transform: translateX(nth($spacing, 1)/2);
+	align-items: flex-start;
+	background-color: $aluminium;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	padding: spacing(3);
+	transform: translateX(spacing(2));
 }
 
 .cardTitle {
-  margin-bottom: nth($spacing, 1);
+	margin-bottom: spacing(3);
 }
 
 .cardDescription {
-  line-height: 1.5;
-  font-weight: 300;
-  margin-bottom: nth($spacing, 2);
+	font-weight: 300;
+	line-height: 1.5;
+	margin-bottom: spacing(4);
 }
 
 .cardButton {
-  background-color: $steel;
-  color: $gunpowder;
-  padding: nth($spacing, 1);
-  display: flex;
-  align-items: center;
-  align-self: flex-end;
-  transition: all 0.5s ease-in-out;
+	align-items: center;
+	align-self: flex-end;
+	background-color: $steel;
+	color: $gunpowder;
+	display: flex;
+	padding: spacing(3);
+	transition: all 0.5s ease-in-out;
 
-  svg {
-    width: 20px;
-    height: 20px;
-    margin-left: nth($spacing, 1)/2;
-    transition: transform 0.5s;
-  }
+	svg {
+		height: 20px;
+		margin-left: spacing(2);
+		transition: transform 0.5s;
+		width: 20px;
+	}
 
-  &:hover {
-    background-color: $gunpowder;
-    color: white;
+	&:hover {
+		background-color: $gunpowder;
+		color: white;
 
-    svg {
-      transform: translateX(nth($spacing, 1)/2);
-    }
-  }
+		svg {
+			transform: translateX(spacing(1));
+		}
+	}
 }

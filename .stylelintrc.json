@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "rules": {
+    "indentation": "tab",
+    "selector-class-pattern": null,
+    "color-named": null,
+    "max-nesting-depth": null
+  }
+}

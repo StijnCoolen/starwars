@@ -1,31 +1,32 @@
-@import "variables";
+@import 'variables';
+@import 'mixins';
 
 .bar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: $aluminium;
-  border-radius: 5px;
-  padding: 0 nth($spacing, 2);
-  width: 100%;
-  margin-top: nth($spacing, 3);
+	align-items: center;
+	background-color: $aluminium;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: row;
+	margin-top: spacing(5);
+	padding: 0 spacing(4);
+	width: 100%;
 }
 
 .input {
-  border: none;
-  width: 100%;
-  background-color: $aluminium;
-  padding: nth($spacing, 2);
+	background-color: $aluminium;
+	border: 0;
+	padding: spacing(4);
+	width: 100%;
 
-  &:focus {
-    outline: none;
-    background-color: $aluminium;
-  }
+	&:focus {
+		background-color: $aluminium;
+		outline: none;
+	}
 }
 
 .icon {
-  width: 24px;
-  height: 24px;
-  color: $gunpowder;
-  margin-right: nth($spacing, 2);
+	color: $gunpowder;
+	height: 24px;
+	margin-right: spacing(4);
+	width: 24px;
 }

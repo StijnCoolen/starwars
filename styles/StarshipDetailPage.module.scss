@@ -1,11 +1,12 @@
-@import "variables";
+@import 'variables';
+@import 'mixins';
 
 .image {
-  width: 100%;
-  display: block;
-  margin-bottom: nth($spacing, 4);
+	display: block;
+	margin-bottom: spacing(6);
+	width: 100%;
 
-  @media (min-width: 1200px) {
-    width: 60%;
-  }
+	@include desktop() {
+		width: 60%;
+	}
 }

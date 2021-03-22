@@ -1,0 +1,11 @@
+@import 'variables';
+
+@mixin desktop() {
+	@media (min-width: 1200px) {
+		@content;
+	}
+}
+
+@function spacing($number) {
+	@return nth($spacing, $number);
+}

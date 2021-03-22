@@ -1,25 +1,26 @@
-@import "variables";
+@import 'variables';
+@import 'mixins';
 
 .row {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  border-bottom: 1px solid $steel;
-  padding: nth($spacing, 1) 0;
+	align-items: flex-start;
+	border-bottom: 1px solid $steel;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: spacing(3) 0;
+	width: 100%;
 
-  @media (min-width: 1200px) {
-    flex-direction: row;
-    align-items: center;
-  }
+	@include desktop() {
+		align-items: center;
+		flex-direction: row;
+	}
 }
 
 .label {
-  font-weight: bold;
-  margin-bottom: nth($spacing, 1);
+	font-weight: bold;
+	margin-bottom: spacing(3);
 
-  @media (min-width: 1200px) {
-    margin-bottom: 0;
-  }
+	@include desktop() {
+		margin-bottom: 0;
+	}
 }
